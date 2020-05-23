@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		ADF724C52479DEC40047740C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724C42479DEC40047740C /* AppDelegate.swift */; };
 		ADF724C72479DEC40047740C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724C62479DEC40047740C /* SceneDelegate.swift */; };
-		ADF724C92479DEC40047740C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724C82479DEC40047740C /* ContentView.swift */; };
+		ADF724C92479DEC40047740C /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724C82479DEC40047740C /* TaskListView.swift */; };
 		ADF724CB2479DEC70047740C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF724CA2479DEC70047740C /* Assets.xcassets */; };
 		ADF724CE2479DEC70047740C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF724CD2479DEC70047740C /* Preview Assets.xcassets */; };
 		ADF724D12479DEC70047740C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADF724CF2479DEC70047740C /* LaunchScreen.storyboard */; };
+		ADF724DA2479DF4A0047740C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724D92479DF4A0047740C /* Task.swift */; };
+		ADF724E02479E55F0047740C /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724DF2479E55F0047740C /* TaskCellViewModel.swift */; };
+		ADF724E22479EB0C0047740C /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF724E12479EB0C0047740C /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ADF724C12479DEC40047740C /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF724C42479DEC40047740C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF724C62479DEC40047740C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADF724C82479DEC40047740C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADF724C82479DEC40047740C /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		ADF724CA2479DEC70047740C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADF724CD2479DEC70047740C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ADF724D02479DEC70047740C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADF724D22479DEC70047740C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADF724D92479DF4A0047740C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ADF724DF2479E55F0047740C /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		ADF724E12479EB0C0047740C /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,10 @@
 		ADF724C32479DEC40047740C /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
-				ADF724C42479DEC40047740C /* AppDelegate.swift */,
-				ADF724C62479DEC40047740C /* SceneDelegate.swift */,
-				ADF724C82479DEC40047740C /* ContentView.swift */,
+				ADF724DD2479E0980047740C /* App */,
+				ADF724D82479DF350047740C /* Model */,
+				ADF724DC2479E0890047740C /* Views */,
+				ADF724DE2479E52D0047740C /* ViewModels */,
 				ADF724CA2479DEC70047740C /* Assets.xcassets */,
 				ADF724CF2479DEC70047740C /* LaunchScreen.storyboard */,
 				ADF724D22479DEC70047740C /* Info.plist */,
@@ -73,6 +80,40 @@
 				ADF724CD2479DEC70047740C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADF724D82479DF350047740C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADF724D92479DF4A0047740C /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADF724DC2479E0890047740C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADF724C82479DEC40047740C /* TaskListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADF724DD2479E0980047740C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ADF724C42479DEC40047740C /* AppDelegate.swift */,
+				ADF724C62479DEC40047740C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ADF724DE2479E52D0047740C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ADF724DF2479E55F0047740C /* TaskCellViewModel.swift */,
+				ADF724E12479EB0C0047740C /* TaskListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF724DA2479DF4A0047740C /* Task.swift in Sources */,
 				ADF724C52479DEC40047740C /* AppDelegate.swift in Sources */,
 				ADF724C72479DEC40047740C /* SceneDelegate.swift in Sources */,
-				ADF724C92479DEC40047740C /* ContentView.swift in Sources */,
+				ADF724C92479DEC40047740C /* TaskListView.swift in Sources */,
+				ADF724E02479E55F0047740C /* TaskCellViewModel.swift in Sources */,
+				ADF724E22479EB0C0047740C /* TaskListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
